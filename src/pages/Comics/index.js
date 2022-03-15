@@ -23,7 +23,7 @@ const Comics = () => {
 
   const findComics = async () => {
     // const timestamp = Number(new Date());
-    //  const hash = createHash(timestamp);
+    // const hash = createHash(timestamp);
 
     try {
       const timestamp = Number(new Date());
