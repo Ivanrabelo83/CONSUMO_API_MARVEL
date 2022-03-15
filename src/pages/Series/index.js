@@ -89,7 +89,7 @@ const Series = () => {
       <Content>
         {series.map((serie, index) => (
           <Card
-            Key={index}
+            key={index}
             bg="#061b51"
             name={serie.title}
             photo={`${serie.thumbnail.path}.${serie.thumbnail.extension}`}

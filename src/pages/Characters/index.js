@@ -23,10 +23,13 @@ const Characters = () => {
   const [isSearch, setIsSearch] = useState(true);
 
   const findCharacters = async () => {
-    const timestamp = Number(new Date());
-    const hash = createHash(timestamp);
+    // const timestamp = Number(new Date());
+    // const hash = createHash(timestamp);
 
     try {
+      const timestamp = Number(new Date());
+      const hash = createHash(timestamp);
+
       const { data } = await request.get(
         `/characters?ts=${timestamp}&orderBy=name&limit=10&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
       );
@@ -87,7 +90,7 @@ const Characters = () => {
       <Content>
         {characters.map((characters, index) => (
           <Card
-            index={index}
+            key={index}
             bg="#C51402"
             name={characters.name}
             photo={`${characters.thumbnail.path}.${characters.thumbnail.extension}`}

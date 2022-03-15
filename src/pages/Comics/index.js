@@ -22,8 +22,8 @@ const Comics = () => {
   const [isSearch, setIsSearch] = useState(true);
 
   const findComics = async () => {
-    const timestamp = Number(new Date());
-    const hash = createHash(timestamp);
+    // const timestamp = Number(new Date());
+    //  const hash = createHash(timestamp);
 
     try {
       const timestamp = Number(new Date());
